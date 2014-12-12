@@ -1,0 +1,9 @@
+source "http://rubygems.org"
+
+# App Stack
+gem "sinatra"
+gem "unicorn"
+gem "redis"
+gem "activesupport"
+gem "jwt"
+

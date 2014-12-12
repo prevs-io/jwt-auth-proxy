@@ -1,0 +1,13 @@
+.DS_Store
+log/**/*
+tmp/**/*
+vendor/
+vendor/gems/*
+!vendor/gems/cache/
+.sass-cache/*
+db/*.db
+.*.sw*
+pkg/
+.bundle/
+dump.rdb
+.ruby-version
