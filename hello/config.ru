@@ -4,6 +4,7 @@ require "rubygems"
 require "bundler"
 require "securerandom"
 require "active_support/time"
+
 Bundler.require
 
 # Local config

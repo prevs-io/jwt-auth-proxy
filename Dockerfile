@@ -47,7 +47,10 @@ ADD ./conf/mruby.conf /etc/httpd/conf.d/
 ADD scripts /data/scripts
 ADD hooks /data/hooks
 
+WORKDIR /data/hello
+RUN mkdir -p tmp/{log,pids}
+
 ENV REDIS_HOST 127.0.0.1
 ENV REDIS_PORT 6379
 
-CMD bash -lc ./scripts/start.sh
+CMD bash -lc /data/scripts/start.sh

@@ -4,7 +4,7 @@ port    = 6379
 redis   = Redis.new(host, port)
 
 upstream_addr = "localhost"
-upstream_port = "8080"
+upstream_port = "9000"
 
 secret_key = 'this is the very secret key!'
 

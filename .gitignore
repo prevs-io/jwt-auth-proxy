@@ -11,3 +11,4 @@ pkg/
 .bundle/
 dump.rdb
 .ruby-version
+hello/log/*

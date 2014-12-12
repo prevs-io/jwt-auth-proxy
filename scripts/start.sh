@@ -10,6 +10,8 @@ rbenv local 2.1 && ruby -v
 cd /data/hello
 bundle exec unicorn -c config/unicorn.rb -l 0.0.0.0:8080 &
 
+cd /var/log && python -m SimpleHTTPServer 9000 &
+
 tail -f /var/log/httpd/access_log &
 tail -f /var/log/httpd/error_log &
 tail -F /data/hello/log/stderr.log &
