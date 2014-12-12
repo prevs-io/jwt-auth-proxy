@@ -8,11 +8,13 @@ How to run
 
 - Run container
 
+
     git clone https://github.com/prevs-io/jwt-auth-proxy.git
     docker build -t jwt-auth-proxy .
     docker run -t --rm -p 8080:8080 -p 80:80 jwt-auth-proxy
 
 - Access resources through proxy 
+
 
     $ curl -vI http://0.0.0.0/
     ...
@@ -24,6 +26,7 @@ How to run
 
 - Authentication with auth application
 
+
     $ curl -v http://0.0.0.0:8080/auth
     ...
     < HTTP/1.1 200 OK
@@ -34,6 +37,7 @@ How to run
     < Set-Cookie: p_tkn=<token blah blah blah>; path=/; expires=Mon, 15 Dec 2014 04:49:49 -0000
 
 - Access resouce through the proxy again
+
 
     $ curl -I --cookie p_tkn='<token blah blah blah>; path=/; expires=Mon, 15 Dec 2014 04:42:37 -0000' http://0.0.0.0/
     HTTP/1.1 200 OK
